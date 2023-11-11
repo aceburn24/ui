@@ -1,0 +1,49 @@
+/* App.css */
+
+/* Assuming your header and footer have a fixed height, for example: */
+.header-height {
+  height: 60px; /* Replace with your actual header height */
+}
+
+.footer-height {
+  height: 50px; /* Replace with your actual footer height */
+}
+
+/* Sidebar styling adjusted for header and footer */
+.sidebar {
+  width: 80px;
+  height: calc(100vh - 110px); /* Adjusted for header and footer height */
+  position: fixed;
+  right: 0;
+  top: 60px; /* Same as your header height */
+  bottom: 50px; /* Same as your footer height */
+  transition: width 0.4s;
+  overflow-x: hidden;
+  z-index: 1000; /* Ensure the sidebar is above other content but below fixed header/footer */
+}
+
+/* Rest of the sidebar styling */
+.sidebar:hover {
+  width: 250px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.sidebar-icon {
+  width: 20px;
+  min-width: 20px;
+  margin-right: 10px;
+}
+
+.sidebar-text {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.sidebar:hover .sidebar-text {
+  opacity: 1;
+}
